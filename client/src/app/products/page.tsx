@@ -5,7 +5,7 @@ import { useState } from "react";
 import Header from "../(components)/Header";
 import Rating from "../(components)/Rating";
 import CreateProductModal from "./CreateProductModal";
-
+import Image from "next/image";
 type ProductFormData = {
   name: string;
   price: number;
@@ -71,7 +71,13 @@ const ProductsPage = () => {
               key={product.productId}
             >
               <div className="flex flex-col items-center">
-                img
+                <Image
+                  src={`https://s3invmanagement.s3.eu-central-1.amazonaws.com/products${Math.floor(Math.random() * 3) + 1}.png`}
+                  alt="product"
+                  width={150}
+                  height={150}
+                  className="mb-3 h-36 w-36 rounded-2xl"
+                />
                 <h3 className="text-lg font-semibold text-gray-900">
                   {product.name}
                 </h3>

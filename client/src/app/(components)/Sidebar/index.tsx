@@ -65,7 +65,13 @@ const Sidebar = () => {
         className={`flex items-center justify-between gap-3 pt-8 md:justify-normal ${isSidebarCollapsed ? "px-5" : "px-8"}`}
       >
         <div className="">
-          <Image src="./next.svg" alt="logo" width={36} height={36} />
+          <Image
+            src="https://s3invmanagement.s3.eu-central-1.amazonaws.com/logo.png"
+            alt="logo"
+            width={27}
+            height={27}
+            className="w-8 rounded"
+          />
         </div>
         <h1
           className={`${isSidebarCollapsed ? "hidden" : "block"} text-2xl font-extrabold`}
